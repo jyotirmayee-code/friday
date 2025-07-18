@@ -1,20 +1,12 @@
 import { test, expect } from '@playwright/test';
+import * as loginData from '../testdata/loginTestData.json';
+import { HomePage } from '../Page Object/Homepage';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test("TC_01",async({page})=>{
+await page.goto("https://www.google.com");
+const textField=await page.locator("//textarea[@class='gLFyf']");
+await textField.fill("virat kohli");
+await textField.press('Enter');
+  
+})
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-  console.log("Test case -1 done");
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-  console.log("tc-02 successfully completed");
-});
