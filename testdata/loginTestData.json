@@ -1,0 +1,19 @@
+{
+    "Admin":
+    {
+   "Login Id":1234,
+   "Login password":"Edha"
+    },
+    "Customer":
+    {
+        "Login Id":223,
+        "Login password":"Buba"
+    },
+
+    "Rain":123,
+    "Soil":"Yes",
+    "Agriculture":"Yes",
+    "Bhaskar Padhi":"Papa"
+
+
+}
