@@ -10,3 +10,11 @@ await textField.press('Enter');
   
 })
 
+test("TC_02",async({page})=>{
+await page.goto("https://www.google.com");
+const textField=await page.locator("//textarea[@class='gLFyf']");
+await textField.fill("Googlegi");
+await textField.press('Enter');
+  
+})
+
