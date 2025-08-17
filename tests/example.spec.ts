@@ -28,6 +28,14 @@ console.log(await name.textContent());
 
 })
 
+test("TC_02",async({page})=>{
+await page.goto("https://www.google.com");
+const textField=await page.locator("//textarea[@class='gLFyf']");
+await textField.fill("Googlegi");
+await textField.press('Enter');
+  
+})
+
 test("validate cos product detail page",async({page})=>{
 await page.goto("https://www.cos.com/en-gb/women/womenswear/tops/polo-shirts/product/relaxed-striped-long-sleeved-polo-shirt-white-striped-1266544001");
 await page.locator("//button[text()='Accept all cookies']").click();
